@@ -3,13 +3,71 @@ import { StyleSheet, Text, View, Image, Button } from 'react-native';
 import Carousel from "react-native-carousel-control";
 
 export default function App() {
-  const teachrs = {
-    nom: 'Dupont',
-    prenom: 'Jean',
-    formation: 'Faq de Londre',
-    description: 'klsdfp,apzihjea pojpoaazp qssssssssssssssss,azepoj',
+  const teachrs = [
+    {
+      nom: 'Dupont',
+      prenom: 'Jean',
+      formation: 'Faq de Londre',
+      description: 'klsdfp,apzihjea pojpoaazp qssssssssssssssss,azepoj'
+    },
+    {
+      nom: 'Dupont',
+      prenom: 'Jean',
+      formation: 'Faq de Londre',
+      description: 'klsdfp,apzihjea pojpoaazp qssssssssssssssss,azepoj'
+    },
+    {
+      nom: 'Dupont',
+      prenom: 'Jean',
+      formation: 'Faq de Londre',
+      description: 'klsdfp,apzihjea pojpoaazp qssssssssssssssss,azepoj'
+    },
+    {
+      nom: 'Dupont',
+      prenom: 'Jean',
+      formation: 'Faq de Londre',
+      description: 'klsdfp,apzihjea pojpoaazp qssssssssssssssss,azepoj'
+    },
+    {
+      nom: 'Dupont',
+      prenom: 'Jean',
+      formation: 'Faq de Londre',
+      description: 'klsdfp,apzihjea pojpoaazp qssssssssssssssss,azepoj'
+    },
+    {
+      nom: 'Dupont',
+      prenom: 'Jean',
+      formation: 'Faq de Londre',
+      description: 'klsdfp,apzihjea pojpoaazp qssssssssssssssss,azepoj'
+    },
+    {
+      nom: 'Dupont',
+      prenom: 'Jean',
+      formation: 'Faq de Londre',
+      description: 'klsdfp,apzihjea pojpoaazp qssssssssssssssss,azepoj'
+    },
+    {
+      nom: 'Dupont',
+      prenom: 'Jean',
+      formation: 'Faq de Londre',
+      description: 'klsdfp,apzihjea pojpoaazp qssssssssssssssss,azepoj'
+    },
+    {
+      nom: 'Dupont',
+      prenom: 'Jean',
+      formation: 'Faq de Londre',
+      description: 'klsdfp,apzihjea pojpoaazp qssssssssssssssss,azepoj'
+    },
+    {
+      nom: 'Dupont',
+      prenom: 'Jean',
+      formation: 'Faq de Londre',
+      description: 'klsdfp,apzihjea pojpoaazp qssssssssssssssss,azepoj'
+    },
+  ]
 
-  };
+
+
 
   return (
     <View style={styles.container}>
@@ -18,39 +76,43 @@ export default function App() {
       </View>
       <Carousel pageStyle={styles.carousel}>
 
-        <View style={styles.divParent}>
+        {
+        teachrs.map((teachr,index) => 
+          <View key={index} style={styles.divParent}>
 
-          <View style={styles.flexImgNom}>
-            <View style={styles.divImage}>
-              <Image source={require('./image/870x489_trou_noir.jpg')} style={styles.image} />
+            <View style={styles.flexImgNom}>
+              <View style={styles.divImage}>
+                <Image source={require('./image/870x489_trou_noir.jpg')} style={styles.image} />
 
+              </View>
+
+              <View style={styles.divNom}>
+                <Text>{teachr.nom} {teachr.prenom}</Text>
+              </View>
             </View>
 
-            <View style={styles.divNom}>
-              <Text>{teachrs.nom} {teachrs.prenom}</Text>
+            <View style={styles.divFormDesc}>
+              <View>
+                <Text style={styles.textTitle}>Formation</Text>
+                <Text style={styles.textContent}>{teachr.formation}</Text>
+              </View>
+              <View style={styles.divDesc}>
+                <Text style={styles.textTitle}>Description</Text>
+                <Text style={styles.textContent}>{teachr.description}</Text>
+              </View>
+
             </View>
-          </View>
-
-          <View style={styles.divFormDesc}>
-            <View>
-              <Text style={styles.textTitle}>Formation</Text>
-              <Text style={styles.textContent}>{teachrs.formation}</Text>
+            <View style={styles.btn} >
+              <Button title="Prendre un cours avec ce Teach'r " />
             </View>
-            <View style={styles.divDesc}>
-              <Text style={styles.textTitle}>Description</Text>
-              <Text style={styles.textContent}>{teachrs.description}</Text>
+            <View style={styles.btn} >
+              <Button title="Retirer ce Teach'r de mes favoris" color="orange" />
             </View>
 
-          </View>
-          <View style={styles.btn} >
-            <Button title="Prendre un cours avec ce Teach'r "  />
-          </View>
-          <View style={styles.btn} >
-            <Button title="Retirer ce Teach'r de mes favoris" color="orange" />
-          </View>
 
+          </View>
+        )}
 
-        </View>
       </Carousel>
 
     </View>
