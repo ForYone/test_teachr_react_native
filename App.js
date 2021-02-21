@@ -5,64 +5,64 @@ import Carousel from "react-native-carousel-control";
 export default function App() {
   const teachrs = [
     {
-      nom: 'Dupont',
+      nom: 'Stack',
+      prenom: 'Marie',
+      formation: 'Université de Londre',
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text"
+    },
+    {
+      nom: 'Romanov',
+      prenom: 'Natacha',
+      formation: 'Université de Londre',
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text"
+    },
+    {
+      nom: 'Bruce',
+      prenom: 'Wayne',
+      formation: 'Université de Londre',
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text"
+    },
+    {
+      nom: 'Bruce',
+      prenom: 'Baner',
+      formation: 'Université de Londre',
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text"
+    },
+    {
+      nom: 'Carla',
       prenom: 'Jean',
-      formation: 'Faq de Londre',
-      description: 'klsdfp,apzihjea pojpoaazp qssssssssssssssss,azepoj'
+      formation: 'Université de Londre',
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text"
+    },
+    {
+      nom: 'More',
+      prenom: 'Marlene',
+      formation: 'Université de Londre',
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text"
+    },
+    {
+      nom: 'Florie',
+      prenom: 'Karole',
+      formation: 'Université de Londre',
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text"
+    },
+    {
+      nom: 'Tyler',
+      prenom: 'Jax',
+      formation: 'Université de Londre',
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text"
     },
     {
       nom: 'Dupont',
       prenom: 'Jean',
-      formation: 'Faq de Londre',
-      description: 'klsdfp,apzihjea pojpoaazp qssssssssssssssss,azepoj'
+      formation: 'Université de Londre',
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text"
     },
     {
-      nom: 'Dupont',
-      prenom: 'Jean',
-      formation: 'Faq de Londre',
-      description: 'klsdfp,apzihjea pojpoaazp qssssssssssssssss,azepoj'
-    },
-    {
-      nom: 'Dupont',
-      prenom: 'Jean',
-      formation: 'Faq de Londre',
-      description: 'klsdfp,apzihjea pojpoaazp qssssssssssssssss,azepoj'
-    },
-    {
-      nom: 'Dupont',
-      prenom: 'Jean',
-      formation: 'Faq de Londre',
-      description: 'klsdfp,apzihjea pojpoaazp qssssssssssssssss,azepoj'
-    },
-    {
-      nom: 'Dupont',
-      prenom: 'Jean',
-      formation: 'Faq de Londre',
-      description: 'klsdfp,apzihjea pojpoaazp qssssssssssssssss,azepoj'
-    },
-    {
-      nom: 'Dupont',
-      prenom: 'Jean',
-      formation: 'Faq de Londre',
-      description: 'klsdfp,apzihjea pojpoaazp qssssssssssssssss,azepoj'
-    },
-    {
-      nom: 'Dupont',
-      prenom: 'Jean',
-      formation: 'Faq de Londre',
-      description: 'klsdfp,apzihjea pojpoaazp qssssssssssssssss,azepoj'
-    },
-    {
-      nom: 'Dupont',
-      prenom: 'Jean',
-      formation: 'Faq de Londre',
-      description: 'klsdfp,apzihjea pojpoaazp qssssssssssssssss,azepoj'
-    },
-    {
-      nom: 'Dupont',
-      prenom: 'Jean',
-      formation: 'Faq de Londre',
-      description: 'klsdfp,apzihjea pojpoaazp qssssssssssssssss,azepoj'
+      nom: 'Pyke',
+      prenom: 'Justine',
+      formation: 'Université de Londre',
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text"
     },
   ]
 
@@ -82,7 +82,7 @@ export default function App() {
 
             <View style={styles.flexImgNom}>
               <View style={styles.divImage}>
-                <Image source={require('./image/870x489_trou_noir.jpg')} style={styles.image} />
+                <Image source={require('./image/avatar-neutre-homme-1.jpg')} style={styles.image} />
 
               </View>
 
