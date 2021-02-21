@@ -1,9 +1,15 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image, Button } from 'react-native';
 import Carousel from "react-native-carousel-control";
 
 export default function App() {
+  const teachrs = {
+    nom: 'Dupont',
+    prenom: 'Jean',
+    formation: 'Faq de Londre',
+    description: 'klsdfp,apzihjea pojpoaazp qssssssssssssssss,azepoj',
 
+  };
 
   return (
     <View style={styles.container}>
@@ -11,9 +17,40 @@ export default function App() {
         <Text style={styles.textHeader}>Teach'rs favoris</Text>
       </View>
       <Carousel pageStyle={styles.carousel}>
-        <Text>Hello</Text>
-        <Text>World!</Text>
-        <Text>From carousel</Text>
+
+        <View style={styles.divParent}>
+
+          <View style={styles.flexImgNom}>
+            <View style={styles.divImage}>
+              <Image source={require('./image/870x489_trou_noir.jpg')} style={styles.image} />
+
+            </View>
+
+            <View style={styles.divNom}>
+              <Text>{teachrs.nom} {teachrs.prenom}</Text>
+            </View>
+          </View>
+
+          <View style={styles.divFormDesc}>
+            <View>
+              <Text style={styles.textTitle}>Formation</Text>
+              <Text style={styles.textContent}>{teachrs.formation}</Text>
+            </View>
+            <View style={styles.divDesc}>
+              <Text style={styles.textTitle}>Description</Text>
+              <Text style={styles.textContent}>{teachrs.description}</Text>
+            </View>
+
+          </View>
+          <View style={styles.btn} >
+            <Button title="Prendre un cours avec ce Teach'r "  />
+          </View>
+          <View style={styles.btn} >
+            <Button title="Retirer ce Teach'r de mes favoris" color="orange" />
+          </View>
+
+
+        </View>
       </Carousel>
 
     </View>
@@ -24,11 +61,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    justifyContent: 'center',
+    fontFamily: ''
   },
   header: {
     marginBottom: 50,
-    height: 190,
+    height: 170,
     backgroundColor: '#0099FF',
 
   },
@@ -41,9 +78,68 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   carousel: {
-    backgroundColor: "blue",
+    backgroundColor: "white",
     borderRadius: 10,
-    height: 400,
+    height: 480,
     width: 250,
-  }
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  },
+  image: {
+    width: 60,
+    height: 60,
+    borderRadius: 50,
+    marginRight: 20,
+
+  },
+  divParent: {
+    height: 470,
+    margin: 20,
+
+  },
+  flexImgNom: {
+    flex: 1,
+    flexDirection: 'row',
+  },
+  divNom: {
+    height: 70,
+    width: 120,
+    justifyContent: 'center',
+
+  },
+  divImage: {
+    height: 100,
+    marginTop: 20,
+
+  },
+  divFormDesc: {
+    height: 260,
+
+  },
+  textTitle: {
+    color: 'grey',
+    fontSize: 15,
+
+  },
+  divDesc: {
+    marginTop: 40,
+  },
+  textContent: {
+    fontSize: 17,
+    fontWeight: "bold",
+  },
+  btn: {
+    height: 60,
+
+  },
+
+
+
+
 });
