@@ -1,0 +1,12 @@
+{
+  "name": "teachr",
+  "displayName": "teachr",
+  "expo": {
+    "name": "teachr",
+    "slug": "teachr",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
